@@ -43,6 +43,7 @@ export default {
 		** You can extend webpack config here
 		*/
 		extend(config, ctx) {
+			Object.assign(config.resolve.alias, require("./aliases.config"));
 		}
 	}
 }
