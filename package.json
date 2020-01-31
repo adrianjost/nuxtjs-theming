@@ -1,0 +1,19 @@
+{
+  "name": "nuxtjs-theming",
+  "version": "1.0.0",
+  "description": "This Repo belongs to an article series on medium.org and demonstrates the techniques shown there.",
+  "author": "Adrian Jost &lt;me@adrianjost.dev&gt;",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
