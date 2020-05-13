@@ -23,11 +23,13 @@ const getThemeAliases = (dir, theme) => {
 
 const aliases = {
 	// generate theme aliases for the src/components directory
+	...getThemeAliases("assets", process.env.THEME),
 	...getThemeAliases("components", process.env.THEME),
 	// required to not break nuxt
 	"@": "src",
 	"@@": ".",
 	// custom aliases
+	"@assets": "src/assets",
 	"@components": "src/components"
 };
 
