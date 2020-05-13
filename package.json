@@ -2,15 +2,17 @@
   "name": "nuxtjs-theming",
   "version": "1.0.0",
   "description": "This Repo belongs to an article series on medium.org and demonstrates the techniques shown there.",
-  "author": "Adrian Jost &lt;me@adrianjost.dev&gt;",
+  "author": "Adrian Jost",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+		"dev": "nuxt --port 3000",
+		"dev:themed": "cross-env THEME=THEME-A nuxt --port 3001",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "cross-env": "^7.0.2",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

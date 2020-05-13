@@ -10,6 +10,8 @@ $ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
+# or with the example themed applied at localhost:3001
+$ npm run dev:themed
 
 # build for production and launch server
 $ npm run build

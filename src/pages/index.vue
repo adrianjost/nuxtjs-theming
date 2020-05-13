@@ -10,12 +10,12 @@
 			</h2>
 			<div class="links">
 				<a
-					href="https://nuxtjs.org/"
+					href="https://medium.com/p/18e9caa1dfd9"
 					target="_blank"
 					class="button--green"
-				>Documentation</a>
+				>Article Series</a>
 				<a
-					href="https://github.com/nuxt/nuxt.js"
+					href="https://github.com/adrianjost/nuxtjs-theming"
 					target="_blank"
 					class="button--grey"
 				>GitHub</a>
