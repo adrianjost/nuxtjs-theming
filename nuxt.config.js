@@ -1,7 +1,12 @@
+import fs from "fs"
+
+const theme = process.env.THEME || "default";
 
 export default {
 	mode: 'universal',
 	srcDir: "src/",
+	// required if themed and normal version should run at the same time
+	buildDir: `.nuxt-${theme}`,
 	/*
 	** Headers of the page
 	*/
@@ -44,6 +49,26 @@ export default {
 		*/
 		extend(config, ctx) {
 			Object.assign(config.resolve.alias, require("./aliases.config"));
+		},
+	},
+	/*
+	** themed pages
+	*/
+	router: {
+		extendRoutes(routes, resolve) {
+			if(theme === "default"){
+				console.log("not themed!")
+				return
+			}
+			routes.map(route => {
+				const path = resolve(`src/themes/${theme}/${route.chunkName}.vue`)
+
+				if (fs.existsSync(path)) {
+					route.component = path
+				}
+
+				return route
+			})
 		}
 	}
 }
